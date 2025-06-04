@@ -1,0 +1,76 @@
+body {
+      margin: 0;
+      overflow-x: hidden;
+    }
+
+    .home-section {
+      background-image: url('asset/image/walpaper4jpg.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .overlay {
+      position: absolute;
+      background-color: rgba(0, 0, 0, 0.4);
+      z-index: 10;
+    }
+
+    .logo-animate {
+      animation: pulse 3s infinite;
+      cursor: pointer;
+      z-index: 20;
+    }
+
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(1.1); opacity: 0.8; }
+    }
+
+    .slice {
+      position: absolute;
+      width: 50%;
+      height: 50%;
+      background-size: cover;
+      background-repeat: no-repeat;
+      z-index: 30;
+      transition: transform 1s ease-in-out;
+    }
+
+    .slice1 {
+      top: 0;
+      left: 0;
+      background-color: black;
+      background-position: top left;
+      transform-origin: top left;
+    }
+
+    .slice2 {
+      top: 0;
+      right: 0;
+      background-color: black;
+      background-position: top right;
+      transform-origin: top right;
+    }
+
+    .slice3 {
+      bottom: 0;
+      left: 0;
+      background-color: black;
+      background-position: bottom left;
+      transform-origin: bottom left;
+    }
+
+    .slice4 {
+      bottom: 0;
+      right: 0;
+      background-color: black;
+      background-position: bottom right;
+      transform-origin: bottom right;
+    }
+
+    .slice.animate.slice1 { transform: rotate(-45deg) translate(-100%, -100%); }
+    .slice.animate.slice2 { transform: rotate(45deg) translate(100%, -100%); }
+    .slice.animate.slice3 { transform: rotate(45deg) translate(-100%, 100%); }
+    .slice.animate.slice4 { transform: rotate(-45deg) translate(100%, 100%); }

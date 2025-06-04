@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CyberZ</title>
+  <link rel="icon" type="image/png" href="asset/image/logo.png">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+</head>
+<body class="scroll-smooth text-white">
+
+  <!-- Navbar -->
+  <!-- Navbar -->
+<nav id="navbar" class="fixed top-0 left-1/2 transform -translate-x-1/2 z-[9999] transition duration-500 opacity-0 pointer-events-none">
+  <ul class="flex space-x-6 bg-opacity-90 px-8 py-3 rounded-full shadow-md text-white mt-3" style="background-color:	#808080;">
+    <li><a href="#home" class="hover:underline">Home</a></li>
+    <li><a href="penting.html" class="hover:underline">Penting</a></li>
+    <li><a href="fitur.html" class="hover:underline">Fitur</a></li>
+  </ul>
+</nav>
+
+
+  <!-- Section Home -->
+  <section id="home" class="home-section h-screen relative">
+    <div class="overlay"></div>
+
+    <!-- Logo -->
+    <div class="relative z-50 flex items-center justify-center h-full">
+      <img
+        id="logo"
+        src="asset/image/logo.png"
+        class="w-40 h-40 rounded-full shadow-lg logo-animate"
+        alt="Logo"
+      />
+    </div>
+
+    <!-- Sayatan -->
+    <div class="slice slice1"></div>
+    <div class="slice slice2"></div>
+    <div class="slice slice3"></div>
+    <div class="slice slice4"></div>
+  </section>
+
+  <!-- About Section -->
+<section id="About" class="py-16 bg-black text-white">
+  
+  <div class="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-12 items-center">
+    <!-- Text Content -->
+     <div class="flex justify-center">
+      <img src="asset/image/Protect.png"  class="w-2/3 md:w-1/2 rounded-lg shadow-lg" />
+    </div>
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        Lindungi Group chat mu
+      </h2>
+      <p class="mb-4 text-gray-300 text-base leading-relaxed">
+        Fungsi utama dari CyberZ bot adalah untuk mengatur Group chat seperti menutup/membuka group secara otomatis, Membuat pengumuman yang semua orang pasti membacanya, Menghapus otomotis chat yg mengandung kata kotor/toxic dan masih banyak lagi.
+      </p>
+    </div>
+    
+  </div>
+
+  <div class="max-w-7xl mx-auto mt-20 px-4 grid md:grid-cols-2 gap-12 items-center">
+
+    <div>
+      <h2 class="text-3xl md:text-4xl font-bold mb-4">
+        550+ fitur
+      </h2>
+      <p class="mb-4 text-gray-300 text-base leading-relaxed">
+        Fitur yang sangat banyak dan menyediakan game dan tebak-tebakan dan sangat cocok untuk group chat keluarga, jual beli, komunitas apalagi group yang memberikan banyak informasi kepada semua member.
+      </p>
+    </div>
+    <div class="flex justify-center">
+      <img src="asset/image/logo.png" alt="Logo Image" class="w-2/3 md:w-1/2 rounded-lg shadow-lg" />
+    </div>
+  </div>
+</section>
+
+
+  <section id="pricing" class="py-16 bg-white text-gray-900">
+  <div class="text-center mb-10">
+    <h2 class="text-4xl font-bold">List harga</h2>
+  </div>
+
+  <!-- Pilihan Kategori -->
+  <div class="flex justify-center mb-12 gap-4">
+    <button id="btn-normal" class="bg-gray-800 text-white font-semibold px-6 py-2 rounded-full hover:bg-gray-700 transition">Normal</button>
+    <button id="btn-vip" class="bg-gray-300 text-gray-800 font-semibold px-6 py-2 rounded-full hover:bg-gray-400 transition">VIP</button>
+    <button id="btn-lainnya" class="bg-gray-300 text-gray-800 font-semibold px-6 py-2 rounded-full hover:bg-gray-400 transition">Lainnya</button>
+  </div>
+
+  <!-- Normal Content -->
+  <div id="normal-section" class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 max-w-7xl mx-auto">
+    <!-- Premium -->
+    <div class="rounded-xl shadow-lg border overflow-hidden flex flex-col">
+      <div class="bg-[#808080] text-white p-4 text-center text-xl font-bold">Premium</div>
+      <div class="p-6 flex-grow">
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li>Akses penuh ke fitur</li>
+          <li>Support di Chat pribadi</li>
+          <li>Akses tanpa batas</li>
+        </ul>
+        <div class="space-y-3">
+          <a href="https://wa.me/6288293391320?text=Beli%20premium%2030%20hari%0Atotal%2010k" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">30 Hari : 10k</a>
+          <a href="https://wa.me/6288293391320?text=Beli%20premium%2060%20hari%0Atotal%2015k" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">60 hari : 15k</a>
+          <a href="https://wa.me/6288293391320?text=Beli%20premium%20permanent%0Atotal%2045k" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Permanen : 45k</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Group -->
+    <div class="rounded-xl shadow-lg border overflow-hidden flex flex-col">
+      <div class="bg-[#808080] text-white p-4 text-center text-xl font-bold">Group</div>
+      <div class="p-6 flex-grow">
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li>Fitur khusus admin group</li>
+          <li>Semua member bisa mengakses</li>
+          <li>Bergaransi dengan S&K berlaku</li>
+        </ul>
+        <div class="space-y-3">
+          <a href="https://wa.me/6288293391320?text=Mau%20percobaan%20gratis%201%0Ahari" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Percobaan : Gratis</a>
+          <a href="https://wa.me/6288293391320?text=Sewa%20group%2030%20hari%0Atotal%2015k" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">30 hari : 15k</a>
+          <a href="https://wa.me/6288293391320?text=Sewa%20group%2030%20hari%0Atotal%2025k" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">60 hari : 25k</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Market -->
+    <div class="rounded-xl shadow-lg border overflow-hidden flex flex-col">
+      <div class="bg-[#808080] text-white p-4 text-center text-xl font-bold">Market</div>
+      <div class="p-6 flex-grow">
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li>Tidak dapat mengakses game</li>
+          <li>Gratis menu button</li>
+          <li>Bergaransi dengan S&K berlaku</li>
+        </ul>
+        <div class="space-y-3">
+          <a href="https://wa.me/6288293391320?text=Sewa%20group%20market%2030%20hari%0Atotal%2015k" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">30 hari : 15k</a>
+          <a href="https://wa.me/6288293391320?text=Sewa%20group%20market%2060%20hari%0Atotal%2025k" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">60 hari : 25k</a>
+          <a href="https://wa.me/6288293391320?text=Sewa%20group%20market%2090%20hari%0Atotal%2032k" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">90 hari : 32k </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- VIP Content -->
+  <div id="vip-section" class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 max-w-7xl mx-auto hidden">
+    <!-- VIP I -->
+    <div class="rounded-xl shadow-lg border overflow-hidden flex flex-col">
+      <div class="bg-[#808080] text-white p-4 text-center text-xl font-bold">VIP I</div>
+      <div class="p-6 flex-grow">
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li>Akses bot ke 1 group</li>
+          <li>Gratis 1 premium </li>
+          <li>Bergaransi dengan S&K berlaku</li>
+        </ul>
+        <div class="space-y-3">
+          <a href="https://wa.me/6288293391320?text=VIP%20I%2030%20hari%0Atotal%2020k" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">30 hari : 20k</a>
+          <a href="https://wa.me/6288293391320?text=VIP%20I%2030%20hari%0Atotal%2035k" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">60 hari : 35k</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIP II -->
+    <div class="rounded-xl shadow-lg border overflow-hidden flex flex-col">
+      <div class="bg-[#808080] text-white p-4 text-center text-xl font-bold">VIP II</div>
+      <div class="p-6 flex-grow">
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li>Akses bot ke 1 group</li>
+          <li>Gratis premium ke semua admin</li>
+          <li>Bergaransi dengan S&K berlaku</li>
+        </ul>
+        <div class="space-y-3">
+          <a href="https://wa.me/6288293391320?text=VIP%20II%2030%20hari%0Atotal%2030k" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">30 hari : 30k</a>
+          <a href="https://wa.me/6288293391320?text=VIP%20II%2060%20hari%0Atotal%2050k" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">60 hari : 50k</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIP III -->
+    <div class="rounded-xl shadow-lg border overflow-hidden flex flex-col">
+      <div class="bg-[#808080] text-white p-4 text-center text-xl font-bold">VIP III</div>
+      <div class="p-6 flex-grow">
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li>Akses bot ke 1 group</li>
+          <li>Semua member premium(group)</li>
+          <li>Bergaransi dengan S&K berlaku</li>
+        </ul>
+        <div class="space-y-3">
+          <a href="https://wa.me/6288293391320?text=VIP%20III%2030%20hari%0Atotal%2040k" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">30 hari : 40k</a>
+          <a href="https://wa.me/6288293391320?text=VIP%20III%2060%20hari%0Atotal%2065k" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">60 hari : 65k</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!--Lainnya-->
+  <div id="lainnya-section" class="grid grid-cols-1 md:grid-cols-3 gap-6 px-6 max-w-7xl mx-auto hidden">
+    <!-- VIP I -->
+    <div class="rounded-xl shadow-lg border overflow-hidden flex flex-col">
+      <div class="bg-[#808080] text-white p-4 text-center text-xl font-bold">Balance</div>
+      <div class="p-6 flex-grow">
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li>50.000 + 5.000 → Rp 5.000 <br>
+↳ 5.000 XP</li>
+
+<li>100.000 + 20.000 → Rp 10.000<br>
+↳ 10.000 XP</li>
+
+<li>Selanjutnya chat owner</li>
+
+        </ul>
+        <div class="space-y-3">
+          <a href="https://wa.me/6288293391320?text=DAFTAR%20HARGA%20BALANCE%0A%0A50.000%20%2B%205.000%20%E2%86%92%20Rp%205.000%0A%E2%86%B3%205.000%20XP%0A%0A100.000%20%2B%2020.000%20%E2%86%92%20Rp%2010.000%0A%E2%86%B3%2010.000%20XP%0A%0A200.000%20%2B%2050.000%20%E2%86%92%20Rp%2020.000%0A%E2%86%B3%2018.000%20XP%0A%0A250.000%20%2B%2070.000%20%E2%86%92%20Rp%2025.000%0A%E2%86%B3%2022.000%20XP%0A%0A500.000%20%2B%20200.000%20%E2%86%92%20Rp%2050.000%0A%E2%86%B3%2045.000%20XP%0A%0ACatatan%20Penting%3A%0ABalance%20%26%20Premium%20tidak%20ada%20garansi%20dan%20tidak%20bisa%20direfund.%0A%0Asaya%20ingin%20membeli%20balance%20%3A%20" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Hubungin owner</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- VIP II -->
+    <div class="rounded-xl shadow-lg border overflow-hidden flex flex-col">
+      <div class="bg-[#808080] text-white p-4 text-center text-xl font-bold">Button</div>
+      <div class="p-6 flex-grow">
+        <ul class="list-disc list-inside space-y-2 mb-6">
+          <li>1 button : 5k</li>
+          <li>2 button : 9k</li>
+          <li>3 button : 12k</li>
+        </ul>
+        <div class="space-y-3">
+          <a href="https://wa.me/6288293391320?text=%3E%201%20button%20%3A%205k%0A%3E%202%20button%20%3A%209k%0A%3E%203%20button%20%3A%2012k%0A%0Aapa%20bisa%20pasangin%20button%20di%20group%20saya%3F" class="block text-center w-full bg-gray-800 text-white px-4 py-2 rounded hover:bg-gray-700 transition">Hubungin owner</a>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- FAQ Section -->
+<section id="FAQ" class="bg-black text-white py-16 px-6">
+  <div class="max-w-4xl mx-auto">
+    <h2 class="text-4xl font-bold text-center mb-10 text-white">Pertanyaan yang Sering Diajukan</h2>
+
+    <div class="space-y-4">
+      <!-- FAQ Item 1 -->
+      <details class="bg-[#1a1a1a] shadow-md rounded-lg p-4">
+        <summary class="font-semibold cursor-pointer text-[#808080]">Apa itu CyberZ Bot?</summary>
+        <p class="mt-2 text-white">CyberZ Bot adalah bot WhatsApp yang dirancang untuk membantu mengelola grup, menyediakan fitur moderasi, permainan, dan berbagai fungsi otomatis lainnya.</p>
+      </details>
+
+      <!-- FAQ Item 2 -->
+      <details class="bg-[#1a1a1a] shadow-md rounded-lg p-4">
+        <summary class="font-semibold cursor-pointer text-[#808080]">Kalau CyberZ ke kick dari group apa ada solusi?</summary>
+        <p class="mt-2 text-white">Biasanya ada keringanan 1 hari-3 hari untuk di invit ulang. Paling buruknya bisa kena denda sesuai syarat & ketentuan di halaman <a href="penting.html"><b>Penting</b></a></p>
+      </details>
+
+      <!-- FAQ Item 3 -->
+      <details class="bg-[#1a1a1a] shadow-md rounded-lg p-4">
+        <summary class="font-semibold cursor-pointer text-[#808080]">Apakah fitur bot bisa dipakai oleh semua member grup?</summary>
+        <p class="mt-2 text-white">Beberapa fitur tersedia untuk semua member, namun fitur admin hanya dapat digunakan oleh admin grup.</p>
+      </details>
+
+      <!-- FAQ Item 4 -->
+      <details class="bg-[#1a1a1a] shadow-md rounded-lg p-4">
+        <summary class="font-semibold cursor-pointer text-[#808080]">Apakah ada masa percobaan gratis?</summary>
+        <p class="mt-2 text-white">Ya, tersedia masa percobaan gratis selama 1 hari untuk tipe layanan group agar kamu bisa mencoba fitur-fitur dasarnya.</p>
+      </details>
+
+      <!-- FAQ Item 5 -->
+      <details class="bg-[#1a1a1a] shadow-md rounded-lg p-4">
+        <summary class="font-semibold cursor-pointer text-[#808080]">Apakah bisa refund jika botnya mati?</summary>
+        <p class="mt-2 text-white">Untuk layanan Group dan VIP bisa tetapi untuk layanan seperti premium dan balance tidak tersedia refund. Harap membaca syarat & ketentuan di halaman <a href="penting.html"><b>Penting</b></a> sebelum membeli.</p>
+      </details>
+
+      <!-- FAQ Item 6 -->
+      <details class="bg-[#1a1a1a] shadow-md rounded-lg p-4">
+        <summary class="font-semibold cursor-pointer text-[#808080]">Bagaimana cara mengakses fitur nya?</summary>
+        <p class="mt-2 text-white">Kamu bisa menggunakan kata perintah berupa !#$%^&-=+\/.;: sebelum nama fitur <b>Contoh .menu #absen /kick dan seterusnya.</b></p>
+      </details>
+
+      <!-- FAQ Item 7 -->
+      <details class="bg-[#1a1a1a] shadow-md rounded-lg p-4">
+        <summary class="font-semibold cursor-pointer text-[#808080]">Bisa liat testi bot?</summary>
+        <p class="mt-2 text-white">Bisa kamu bisa cek <a href="https://drive.google.com/drive/folders/160uH06poWnSKRHFC-GwVkrfo00q2zAvX?usp=sharing"><b>disini</b></a>.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer Section -->
+<footer class="bg-[#2f2f2f] text-white py-10 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
+    
+    <!-- Komunitas -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2 text-[#808080]">Komunitas CyberZ</h3>
+      <a href="https://chat.whatsapp.com/ITcFQRlkRMO880PpW0Elcb" target="_blank" class="flex items-center justify-center md:justify-start gap-2 text-white hover:underline">
+        <i class="fab fa-whatsapp text-green-500"></i> Gabung Grup WhatsApp
+      </a>
+    </div>
+
+    <!-- Saluran -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2 text-[#808080]">Saluran CyberZ</h3>
+      <a href="https://whatsapp.com/channel/0029Vae7FDcEAKWJtDD7cD0d" target="_blank" class="flex items-center justify-center md:justify-start gap-2 text-white hover:underline">
+        <i class="fab fa-whatsapp text-green-500"></i> Ikuti Channel WhatsApp
+      </a>
+    </div>
+
+    <!-- Kontak Owner -->
+    <div>
+      <h3 class="text-lg font-semibold mb-2 text-[#808080]">Kontak Owner</h3>
+      <a href="https://wa.me/6288293391320" target="_blank" class="flex items-center justify-center md:justify-start gap-2 text-white hover:underline">
+        <i class="fas fa-store text-green-400"></i> Hubungi Ajiiz
+      </a>
+    </div>
+  </div>
+
+  <!-- Garis pemisah -->
+  <div class="border-t border-gray-600 my-6"></div>
+
+  <!-- Bottom Footer -->
+  <div class="text-center text-sm text-gray-400">
+    <p>© 2023 <span class="text-white">CyberZ</span>. All rights reserved. Design by 
+      <a href="https://wa.me/62895414015883" target="_blank" class="text-white font-semibold hover:underline">AZ</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Tombol Ke Atas -->
+<button id="backToTop"
+  class="fixed bottom-20 right-6 z-50 p-3 rounded-full bg-gray-700 bg-opacity-50 text-white hover:bg-opacity-80 transition hidden"
+  title="Kembali ke atas">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<script src="JavaScript.js"></script>
+</body>
+</html>

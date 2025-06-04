@@ -1,0 +1,3233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CyberZ</title>
+  <link rel="icon" type="image/png" href="asset/image/logo.png">
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-black text-white font-sans">
+
+<!-- Navbar -->
+<nav id="navbar" class="fixed top-0 left-1/2 transform -translate-x-1/2 z-[9999] transition duration-500 px-8 py-3 mt-3 rounded-full shadow-md bg-[#808080] text-white bg-opacity-90">
+  <ul class="flex space-x-6">
+    <li><a href="index.html" class="hover:underline">Home</a></li>
+    <li><a href="penting.html" class="hover:underline">Penting</a></li>
+    <li><a href="#fitur" class="hover:underline">Fitur</a></li>
+  </ul>
+</nav>
+
+<section id="FAQ" class="py-16 px-6 mt-10">
+  <div class="max-w-4xl mx-auto">
+
+    <!-- Search bar -->
+    <div class="mb-6 flex gap-2">
+      <input
+        type="text"
+        id="searchInput"
+        placeholder="Cari fitur..."
+        class="flex-1 p-3 rounded-md bg-gray-800 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-gray-500"
+      />
+      <button
+        id="searchBtn"
+        class="px-4 py-3 bg-gray-700 hover:bg-gray-600 rounded-md text-white font-semibold transition"
+      >
+        Cari
+      </button>
+    </div>
+
+    <!-- Dropdown menu -->
+    <div class="mb-8 flex items-center gap-3">
+      <label for="sectionSelect" class="text-gray-300 font-medium">Pilih Menu:</label>
+      <select
+        id="sectionSelect"
+        class="bg-gray-800 text-white p-2 rounded-md border border-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-500"
+      >
+        <option value="all">Allmenu</option>
+        <option value="group">Group</option>
+        <option value="Game">Game</option>
+        <option value="Ai">Ai</option>
+        <option value="Voicejapan">Voice japan</option>
+        <option value="Voicechanger">Voice changer</option>
+        <option value="Owner">Owner</option>
+        <option value="Random">Random</option>
+        <option value="Anonymous">Anonymous</option>
+        <option value="Search">Search</option>
+        <option value="Sticker">Sticker</option>
+        <option value="Tools">Tools</option>
+        <option value="Informasi">Informasi</option>
+        <option value="Download">Download</option>
+        <option value="General">General</option>
+        <option value="Textmaker">Text maker</option>
+      </select>
+    </div>
+
+    <script>
+      const sectionNames = [
+        "Group", "Game", "Ai", "Voicejapan", "Voicechanger", "Owner",
+        "Random", "Anonymous", "Search", "Sticker", "Tools",
+        "Informasi", "Download", "General", "Textmaker"
+      ];
+    </script>
+
+    <div id="allSections">
+      <section id="Group">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">Group</h2>
+        <div id="faqListGroup" class="space-y-4">
+          <details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">absen</summary>
+  <p class="mt-2 text-gray-300">Untuk menyatakan hadir ketika ada absen yang dimulai oleh admin.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">add</summary>
+  <p class="mt-2 text-gray-300">Untuk menambahkan member ke group contoh #add 62xxx.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">addbadword</summary>
+  <p class="mt-2 text-gray-300">Menambahkan jenis kata terlarang di dalam group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">addlist</summary>
+  <p class="mt-2 text-gray-300">Menambahkan list baru dalam group biasanya digunakan Untuk store<br>Catatan: <br>Reply pesan yang ingin di tambahkan pada #list.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">addpoin</summary>
+  <p class="mt-2 text-gray-300">Menambahkan poin Untuk member fungsi dapat di sesuaikan dengan kebutuhan masing-masing, biasanya digunakan Untuk acara/event yang di adakan oleh admin group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">afk</summary>
+  <p class="mt-2 text-gray-300">Untuk menyatakan bahwa sedang offline.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">alarm</summary>
+  <p class="mt-2 text-gray-300">Untuk menampilkan menu alarm.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antibadword</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti toxic alias kata kasar.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antibadwordnokick</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti toxic alias kata kasar tampa dikeluarkan dari group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antibot</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti bot, sehingga mencegah ada bot lain dalam group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antidelete</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti hapus pesan<br>Catatan: <br>Pesan yang dihapus oleh member akan dikirim ulang oleh bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antimentionsw on</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti tag group di status whatsapp <br>Catatan:<br>Langsung dikeluarkan dari group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antimentionsw on warn</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti tag group di status whatsapp <br>Catatan:<br>Tidak langsung dikeluarkan dari group, tapi di beri peringatan terlebih dahulu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antilinkch on</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti link channel whatsapp sehingga menghindari spam<br>Catatan:<br>Langsung dikeluarkan dari group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antilinkch on delete</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti link channel whatsapp sehingga menghindari spam<br>Catatan:<br>Hanya menghapus pesan tersebut.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antilinkch on warn</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti link channel whatsapp sehingga menghindari spam<br>Catatan:<br>Tidak langsung dikeluarkan dari group, tapi di beri peringatan terlebih dahulu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antilink</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti tautan undangan group whatsapp sehingga menghindari spam/promosi<br>Catatan:<br>Langsung dikeluarkan dari group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antilinknokick</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti tautan undangan group whatsapp sehingga menghindari spam<br>Catatan:<br>Tidak dikeluarkan dari group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antiluar</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti nomor asing selain +62 dan +60.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antiviewonce</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti pesan sekali lihat <br>Catatan:<br>Pesan dengan jenis sekali lihat akan dikirim ulang oleh bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antiwame</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti link jenis wa.me/628xxxx <br>Catatan<br>Langsung dikeluarkan dari group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antiwamenokick</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur anti link jenis wa.me/628xxxx <br>Catatan<br>Tidak dikeluarkan dari group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">banmember</summary>
+  <p class="mt-2 text-gray-300">Untuk membatasi member agar tidak bisa menggunakan bot lagi.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">blacklist</summary>
+  <p class="mt-2 text-gray-300">Untuk blacklist member sehingga tidak bisa bergabung dalam group sama sekali.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">delblacklist</summary>
+  <p class="mt-2 text-gray-300">Untuk menghapus number dari daftar blacklist.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listblacklist</summary>
+  <p class="mt-2 text-gray-300">Untuk menampilkan daftar nomor yang sudah diblacklist.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cekabsen</summary>
+  <p class="mt-2 text-gray-300">Untuk menampilkan daftar member yang sudah absen.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cekidgroup</summary>
+  <p class="mt-2 text-gray-300">Untuk menampilkan kode unik alias id group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cekpoint</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat point kamu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ceksewa</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat sisa masa berlaku sewa group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ceksewabyid</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat sisa masa berlaku sewa group berdasarkan id group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cekwarn</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat berapa banyak peringatan yang sudah diberikan oleh bot ke kamu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">createschedulecall</summary>
+  <p class="mt-2 text-gray-300">Untuk membuat jadwal panggilan call dalam group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">delbadword</summary>
+  <p class="mt-2 text-gray-300">Untuk menghapus kata kasar yang terdaftar di #listbadword.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">delete</summary>
+  <p class="mt-2 text-gray-300">Untuk menghapus pesan yang tersedia.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">deleteabsen</summary>
+  <p class="mt-2 text-gray-300">Untuk menghapus absen yang sedang berjalan saat ini.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">deletepoin</summary>
+  <p class="mt-2 text-gray-300">Untuk menghapus point pada member.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">deletetotalpesan</summary>
+  <p class="mt-2 text-gray-300">Untuk menghapus total pesan per number.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">dellist</summary>
+  <p class="mt-2 text-gray-300">Untuk menghapus list yang terdaftar di #list.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">delultahku</summary>
+  <p class="mt-2 text-gray-300">Untuk Menghapus tanggal ulang tahun yang sudah didaftarkan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">delwarn</summary>
+  <p class="mt-2 text-gray-300">Untuk menghapus peringatan yang telah diberikan oleh bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">demote</summary>
+  <p class="mt-2 text-gray-300">Untuk menurunkan jabatan admin menjadi member biasa.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">demotedetector</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan pendeteksi admin yang dilengserkan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">descgc</summary>
+  <p class="mt-2 text-gray-300">Untuk menampilkan rules atau deskripsi group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">done</summary>
+  <p class="mt-2 text-gray-300">Untuk mencetak struk transaksi berhasil atau sukses.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">gamemode</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan fitur game pada group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">getlist</summary>
+  <p class="mt-2 text-gray-300">Untuk mengambil daftar pada group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">groupadmin</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat daftar admin pada group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">groupinfo</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat info detail group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">groupschedule</summary>
+  <p class="mt-2 text-gray-300">Untuk membuat jadwal buka tutup otomatis pada group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">groupsetting</summary>
+  <p class="mt-2 text-gray-300">Untuk membuka atau tutup group menggunakan bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">grouptime</summary>
+  <p class="mt-2 text-gray-300">Untuk membuka atau tutup group dengan delay yang dapat ditentukan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">hidetag</summary>
+  <p class="mt-2 text-gray-300">Untuk membuat pesan dengan tagall yang tersembunyi.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kick</summary>
+  <p class="mt-2 text-gray-300">Untuk mengeluarkan member group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">leavegc</summary>
+  <p class="mt-2 text-gray-300">leavegc.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">left</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan pesan perpisahan Untuk member yang keluar dari group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">levelling</summary>
+  <p class="mt-2 text-gray-300">untul aktif atau menonaktifkan mode naik level otomatis pada group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">linkgc</summary>
+  <p class="mt-2 text-gray-300">Untuk mengambil tautan undangan group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">revokelink</summary>
+  <p class="mt-2 text-gray-300">Untuk mengatur ulang tautan undangan group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">list</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat daftar list pada group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listbadword</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat daftar badword yang sudah ditambahkan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listbanmember</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat daftar member yang dibanned.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listpoint</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat daftar point semua member.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listtotalpesan</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat daftar total pesan semua anggota group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listultah</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat daftar tanggal ulang tahun yang sudah didaftarkan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listwarn</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat daftar semua peringatan pada member group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mulaiabsen</summary>
+  <p class="mt-2 text-gray-300">Untuk memulai sesi absen pada group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mute</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubahbot hanya dapat digunakan oleh para admin group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">pinmsg</summary>
+  <p class="mt-2 text-gray-300">Untuk sematkan pesan pada group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">promote</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah member biasa menjadi admin group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">promotedetector</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan peringatan jika ada member yang naik jabatan menjadi admin.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">proses</summary>
+  <p class="mt-2 text-gray-300">Untuk membuat struk pesanan telah diproses.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">reminder</summary>
+  <p class="mt-2 text-gray-300">Untuk menampilkan daftar menu seputar reminder.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">refreshgroup</summary>
+  <p class="mt-2 text-gray-300">Untuk memperbaharui meta data group [tidak menghapus apapun].</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">reqjoin</summary>
+  <p class="mt-2 text-gray-300">Untuk mengirim permintaan bergabung kedalam group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">resetbadword</summary>
+  <p class="mt-2 text-gray-300">Untuk menghapus semua kata kasar yang terdaftar di #listbadword.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">resetlist</summary>
+  <p class="mt-2 text-gray-300">Untuk menghapus semua list yang tersedia di group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">resetpoint</summary>
+  <p class="mt-2 text-gray-300">Untuk menghapus point semua anggota group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">resettotalpesan</summary>
+  <p class="mt-2 text-gray-300">Untuk menghapus semua total pesan anggota group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">resetultahku</summary>
+  <p class="mt-2 text-gray-300">Untuk menghapus semua jadwal ulang tahun yang tersedia.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">resetwarn</summary>
+  <p class="mt-2 text-gray-300">Untuk menghapus peringatan pada semua anggota group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setdescgc</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah rules alias deskripsi group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setnamegc</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah nama dari group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setopen</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah teks ucapan ketika group dibuka.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setclose</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah teks ucapakn ketika group ditutup.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setppgc</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah foto profil group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setppgcpanjang</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah foto profil group tampa crop sama sekali.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setproses</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah struk pesanan sedang diproses.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setdone</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah struk pesanan telah berhaasil.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setwarn</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah jumlah maximal peringatan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setwelcome</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah teks sambutan selamat datang.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setleft</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah teks ucapan sampai jumpa.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setwelcometype</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah jenis sambutan dan ucapan sampai jumpa.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setlefttype</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah jenis sambuyan dan ucapan sampai jumpa.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">sider</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat daftar member group yang sedang nyimak.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tagall</summary>
+  <p class="mt-2 text-gray-300">Untuk menandai semua member pada group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tfpoint</summary>
+  <p class="mt-2 text-gray-300">Untuk memindahkan point ke sesama anggota.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">totag</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah pesan biasa menjadi pesan hidetag.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">totalpesan</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan penghitungan total pesan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ultahku</summary>
+  <p class="mt-2 text-gray-300">Untuk menambahkan tanggal ulang tahun pada group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">unbanmember</summary>
+  <p class="mt-2 text-gray-300">Untuk membatalkan banned pada member.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">unpinmsg</summary>
+  <p class="mt-2 text-gray-300">Untuk melepas sematan pesan pada group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">vote</summary>
+  <p class="mt-2 text-gray-300">Untuk mengadakan voting pada group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">warn</summary>
+  <p class="mt-2 text-gray-300">Untuk memberi peringatan pada member group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">welcome</summary>
+  <p class="mt-2 text-gray-300">Untuk aktif atau menonaktifkan sambutan selamat datang.</p>
+</details>
+        </div>
+      </section>
+
+      <section id="Game">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">Game</h2>
+        <div id="faqListGame" class="space-y-4">
+          <details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">akinator</summary>
+  <p class="mt-2 text-gray-300">Permainan tebak katakter yang sedang kamu pikirkan.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">akinatorstart</summary>
+  <p class="mt-2 text-gray-300">Memulai permainan tebak karakter dari akinator.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">akinatorstop</summary>
+  <p class="mt-2 text-gray-300">Mengakhiri permainan tebak karakter dari akinator.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">asahotak</summary>
+  <p class="mt-2 text-gray-300">Permainan teka teki asah otak.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">buybalance</summary>
+  <p class="mt-2 text-gray-300">Untuk menampilkan daftar harga balance yang juga bisa didapatkan dengan memainkan gam yg tersedia.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">buylimit</summary>
+  <p class="mt-2 text-gray-300">Untuk membeli limit menggunakan balance jika kehabisan limit.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">caklontong</summary>
+  <p class="mt-2 text-gray-300">Permainan teka teki khas cak lontong.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cekidml</summary>
+  <p class="mt-2 text-gray-300">Untuk menampilkan informasi mobile legends berdasarkan id pengguna.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cekidff</summary>
+  <p class="mt-2 text-gray-300">Untuk menampilkan informasi free fire berdasarkan id pengguna.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cekkhodam</summary>
+  <p class="mt-2 text-gray-300">Untuk menampilkan khodam spiritual berdasarkan nama.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">dare</summary>
+  <p class="mt-2 text-gray-300">Memberi tantangan secara acak.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">family100</summary>
+  <p class="mt-2 text-gray-300">Untuk bermain teka teki asah otak.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">hint</summary>
+  <p class="mt-2 text-gray-300">Memberi petunjuk untuk permainan yg berlangsung.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Math</summary>
+  <p class="mt-2 text-gray-300">Permainan teka teki seputar matematika dengan berbagai jenis kesulitan.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Nyerah</summary>
+  <p class="mt-2 text-gray-300">Untuk menyerah dalam permainan teka teki dan mendapatkan kunci jawaban.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Redeem</summary>
+  <p class="mt-2 text-gray-300">Untuk mendapatkan hadiah dengan menggunakan kode yang diberikan.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Sambungkata</summary>
+  <p class="mt-2 text-gray-300">Permainan saling sambung menyambung kata bersama teman.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Siapakahaku</summary>
+  <p class="mt-2 text-gray-300">Permainan teka teki dengan pertanyaan seputar "siapakah aku?".</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Sloth</summary>
+  <p class="mt-2 text-gray-300">Permainan untuk mencari jackpot dengan cara mencocokkan emoji dalam 1 baris.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Suit</summary>
+  <p class="mt-2 text-gray-300">Permainan batu gunting kertas bersama teman.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Susunkalimat</summary>
+  <p class="mt-2 text-gray-300">Permainan teka teki dengan mengisi kekosongan kata dalam kalimat.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Susunkata</summary>
+  <p class="mt-2 text-gray-300">Permainan teka teki dengan menyusun huruf-huruf menjadi sebuah kata.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Susunlirik</summary>
+  <p class="mt-2 text-gray-300">Permainan teka teki dengan menyusun lirik yang di acak.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tebakbendera</summary>
+  <p class="mt-2 text-gray-300">Permainan teka teki dengan menebak asal bendera negara.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tebakbom</summary>
+  <p class="mt-2 text-gray-300">Permainan tebak angka 1-9 jangan sampai mengenai bom.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tebakchara</summary>
+  <p class="mt-2 text-gray-300">Permainan tebak nama karakter dalam permainan atau film.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tebakgambar</summary>
+  <p class="mt-2 text-gray-300">Permainan tebak susunan kata atau kalimat berdasarkan gambar.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tebakkata</summary>
+  <p class="mt-2 text-gray-300">Permainan tebak kata berdasarkan ciri-ciri yang diberikan.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tebaklagu</summary>
+  <p class="mt-2 text-gray-300">Permainan tebak judul lagu berdasarkan cuplikan lagu.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tebaklaguanime</summary>
+  <p class="mt-2 text-gray-300">Permainan tebak judul lagu anime berdasarkan cuplikan lagu.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tebaklagukpop</summary>
+  <p class="mt-2 text-gray-300">Permainan tebak judul lagu K-Pop berdasarkan cuplikan lagu.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tekateki</summary>
+  <p class="mt-2 text-gray-300">Permainan teka teki umum.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tfbalance</summary>
+  <p class="mt-2 text-gray-300">Untuk transfer dan memindahkan balance ke user lain.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">truth</summary>
+  <p class="mt-2 text-gray-300">Permainan kejujuran dan akan diberi pertanyaan secara acak.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">werewolf</summary>
+  <p class="mt-2 text-gray-300">Permainan mencari sosok werewolf dalam desa dan dapat dimainkan 6-12 pemain.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">uno</summary>
+  <p class="mt-2 text-gray-300">Permainan kartu uno yang dapat dimainkan lebih dari 3 orang.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ulartangga</summary>
+  <p class="mt-2 text-gray-300">Permainan papan ular tangga yang dapat dimainkan lebih dari 2 orang.</p>
+</details>
+
+        </div>
+      </section>
+
+      <section id="Ai">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">Ai</h2>
+        <div id="faqListAi" class="space-y-4">
+          <details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">aiimage</summary>
+  <p class="mt-2 text-gray-300">Membuat foto menggunakan ai berdasarkan yang kamu inginkan</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">openai/ai</summary>
+  <p class="mt-2 text-gray-300">Untuk menggunakan fitut openai atau yang berupa kecerdasan buatan.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">jadianime</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah foto menjadi 2D anime style.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">voicechanger</summary>
+  <p class="mt-2 text-gray-300">Untuk menampilkan menu pengedit suara <br>Contoh: <br>.slow <br>untuk memperlambat suara.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">voicejapan</summary>
+  <p class="mt-2 text-gray-300">Untuk menampilkan menu pengubah teks ke suara karakter game/anime<br>Contoh:<br>.hutao  みなさん、こんにちは。.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">asisten</summary>
+  <p class="mt-2 text-gray-300">Untuk menampilkan menu asisten.</p>
+</details>
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">byenexara</summary>
+  <p class="mt-2 text-gray-300">Untuk mengakhiri percakapan dengan nexara alias menghapus riwayat percakapan di sistem.</p>
+</details>
+        </div>
+      </section>
+
+      <section id="Voicejapan">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">Voice japan</h2>
+        <div id="faqListVoicejapan" class="space-y-4">
+          <details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">specialweek</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi specialweek</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">silencesuzuka</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi silencesuzuka</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tokaiteio</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi tokaiteio</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">maruzensky</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi maruzensky</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">fujikiseki</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi fujikiseki</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">oguricap</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi oguricap</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">goldship</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi goldship</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">vodka</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi vodka</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">daiwascarlet</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi daiwascarlet</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">taikishuttle</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi taikishuttle</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">grasswonder</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi grasswonder</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">hishiamazon</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi hishiamazon</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mejiromcqueen</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi mejiromcqueen</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">elcondorpasa</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi elcondorpasa</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">opera</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi opera</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">naritabrian</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi naritabrian</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">symbolirudolf</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi symbolirudolf</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">airgroove</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi airgroove</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">agnesdigital</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi agnesdigital</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">seiunsky</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi seiunsky</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tamamocross</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi tamamocross</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">finemotion</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi finemotion</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">biwahayahide</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi biwahayahide</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mayanotopgun</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi mayanotopgun</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">manhattancafe</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi manhattancafe</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mihonobourbon</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi mihonobourbon</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mejiroryan</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi mejiroryan</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">yukinobijin</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi yukinobijin</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">riceshower</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi riceshower</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">inesfujin</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi inesfujin</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">agnestachyon</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi agnestachyon</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">admirevega</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi admirevega</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">inarione</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi inarione</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">winningticket</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi winningticket</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">airshakur</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi airshakur</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">eishinflash</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi eishinflash</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">currenchan</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi currenchan</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kawakamiprincess</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi kawakamiprincess</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">goldcity</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi goldcity</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">sakurabakushin</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi sakurabakushin</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">seekingthepearl</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi seekingthepearl</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">shinkowindy</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi shinkowindy</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">sweeptosho</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi sweeptosho</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">supercreek</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi supercreek</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">smartfalcon</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi smartfalcon</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">zennorobroy</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi zennorobroy</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tosenjordan</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi tosenjordan</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">nakayamafesta</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi nakayamafesta</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">naritataishin</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi naritataishin</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">nishinoflower</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi nishinoflower</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">haruurara</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi haruurara</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bamboomemory</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi bamboomemory</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">matikanefukukitaru</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi matikanefukukitaru</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">meishodoto</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi meishodoto</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mejirodober</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi mejirodober</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">nicenature</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi nicenature</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kinghalo</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi kinghalo</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">matikanetannhauser</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi matikanetannhauser</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ikunodictus</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi ikunodictus</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mejiropalmer</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi mejiropalmer</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">daitakuhelios</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi daitakuhelios</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">twinturbo</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi twinturbo</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">satonodiamond</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi satonodiamond</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kitasanblack</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi kitasanblack</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">sakurachiyono</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi sakurachiyono</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">siriussymboli</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi siriussymboli</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mejiroardan</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi mejiroardan</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">yaenomuteki</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi yaenomuteki</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tsurumarutsuyoshi</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi tsurumarutsuyoshi</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mejirobright</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi mejirobright</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">sakuralaurel</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi sakuralaurel</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">naritatoproad</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi naritatoproad</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">yamaninzephyr</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi yamaninzephyr</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">astonmachan</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi astonmachan</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">hayakawatazuna</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi hayakawatazuna</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kopanorickey</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi kopanorickey</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">wonderacute</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi wonderacute</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">presidentakikawa</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi presidentakikawa</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ayachinene</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi ayachinene</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">inabameguru</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi inabameguru</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">shiibatsumugi</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi shiibatsumugi</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kariyawakama</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi kariyawakama</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">togakushitouko</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi togakushitouko</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kujousara</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi kujousara</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">barbara</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi barbara</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">paimon</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi paimon</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">aratakiitto</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi aratakiitto</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">sayu</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi sayu</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">xiangling</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi xiangling</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kamisatoayaka</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi kamisatoayaka</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">chongyun</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi chongyun</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">wanderer</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi wanderer</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">eula</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi eula</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ningguang</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi ningguang</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">zhongli</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi zhongli</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">raidenshogun</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi raidenshogun</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kaedeharakazuha</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi kaedeharakazuha</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cyno</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi cyno</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">noelle</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi noelle</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">yaemiko</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi yaemiko</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kaeya</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi kaeya</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">xiao</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi xiao</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">thoma</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi thoma</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">klee</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi klee</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">diluc</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi diluc</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">yelan</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi yelan</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">shikanoinheizou</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi shikanoinheizou</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">xinyan</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi xinyan</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">lisa</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi lisa</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">yunjin</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi yunjin</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">candace</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi candace</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">rosaria</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi rosaria</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">beidou</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi beidou</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">sangonomiyakokomi</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi sangonomiyakokomi</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">yanfei</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi yanfei</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kukishinobu</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi kukishinobu</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">yoimiya</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi yoimiya</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">amber</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi amber</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">diona</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi diona</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bennett</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi bennett</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">razor</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi razor</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">albedo</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi albedo</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">venti</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi venti</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">playermale</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi playermale</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kamisatoayato</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi kamisatoayato</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">jean</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi jean</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">alhaitham</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi alhaitham</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mona</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi mona</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">nilou</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi nilou</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">hutao</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi hutao</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ganyu</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi ganyu</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">nahida</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi nahida</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">keqing</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi keqing</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">playerfemale</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi playerfemale</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">aloy</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi aloy</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">collei</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi collei</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">dori</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi dori</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tighnari</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi tighnari</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">sucrose</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi sucrose</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">xingqiu</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi xingqiu</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">oz</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi oz</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">gorou</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi gorou</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tartalia</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi tartalia</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kaedehara</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi kaedehara</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ningguang</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi ningguang</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kaeya</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi kaeya</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">diluc</summary>
+  <p class="mt-2 text-gray-300">Mengubah suara menjadi diluc</p>
+</details>
+        </div>
+      </section>
+
+      <section id="Voicechanger">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">Voice changer</h2>
+        <div id="faqListVoicechanger" class="space-y-4">
+          
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Bass</summary>
+  <p class="mt-2 text-gray-300">Membuat suara menjadi lebih rendah (bass), terdengar lebih berat dan dalam.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Blown</summary>
+  <p class="mt-2 text-gray-300">Membuat suara menjadi pecah atau seperti terdistorsi, mirip seperti speaker yang rusak.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Deep</summary>
+  <p class="mt-2 text-gray-300">Menurunkan nada suara agar terdengar lebih dalam dan berat, mirip dengan “bass” tapi lebih fokus pada kesan berat.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Earrape</summary>
+  <p class="mt-2 text-gray-300">Membuat suara menjadi sangat keras, berisik, dan pecah, bisa membuat pendengar merasa terganggu (seperti overload speaker).</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Fast</summary>
+  <p class="mt-2 text-gray-300">Mempercepat suara sehingga terdengar lebih cepat dan seringkali lebih tinggi nadanya.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Fat</summary>
+  <p class="mt-2 text-gray-300">Membuat suara menjadi lebih tebal dan gemuk, seringkali menambahkan gema atau efek reverb.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Nightcore</summary>
+  <p class="mt-2 text-gray-300">Mempercepat suara sekaligus menaikkan nadanya agar terdengar lebih tinggi, mirip lagu-lagu nightcore.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Reverse</summary>
+  <p class="mt-2 text-gray-300">Membalikkan suara sehingga terdengar seperti diputar mundur.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Robot</summary>
+  <p class="mt-2 text-gray-300">Membuat suara terdengar seperti suara robotik atau sintetik.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Slow</summary>
+  <p class="mt-2 text-gray-300">Memperlambat suara sehingga terdengar lebih lambat dan berat.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Smooth</summary>
+  <p class="mt-2 text-gray-300">Membuat suara terdengar lebih halus, mengurangi noise atau distorsi.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">Tupai </summary>
+  <p class="mt-2 text-gray-300">Membuat suara menjadi lebih tinggi dan cepat, mirip suara tupai.
+        </div>
+      </section>
+
+      <section id="Owner">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">Owner</h2>
+        <div id="faqListOwner" class="space-y-4">
+          
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">addbalance</summary>
+  <p class="mt-2 text-gray-300">Menambahkan balance user dengan maximal 999.999.999.999</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">addlevel</summary>
+  <p class="mt-2 text-gray-300">Menambahkan level pada pengguna.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">addlimit</summary>
+  <p class="mt-2 text-gray-300">Menambahkan limit pada pengguna.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">addpremium</summary>
+  <p class="mt-2 text-gray-300">Menambah pengguna premium baru ke database.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">addrespon</summary>
+  <p class="mt-2 text-gray-300">Menambahkan pesan balas otomatis baru ke database.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">addsewa</summary>
+  <p class="mt-2 text-gray-300">Menambah group sewa baru ke database.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">addxp</summary>
+  <p class="mt-2 text-gray-300">Menambahkan pint exp pada pengguna.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">anticall</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan sistem tampa panggilan masuk dengan blokir otomatis.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">anticallnoblock</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan sistem tampa panggilan masuk tampa blokir otomatis.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">antideletepc</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan sistem anti delete message dan mengirim ulang pesan yang dihapus.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">autoleavegcnosewa</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan sistem keluar otomatisdari group yang tidak  masuk dalam database sewa.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">autonexara</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan sistem balasan otomatis nexara jika nama dipanngil atau nomor bot di tag.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">autoread</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan sistem baca pesan masuk otomatis.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">autotype</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan sistem [mengetik...] otomatis ketika sedang memproses pesan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ban</summary>
+  <p class="mt-2 text-gray-300">Menambahkan pengguna #listban sehingga tidak bisa menggunakan bot lagi.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">block</summary>
+  <p class="mt-2 text-gray-300">Memblokir pengguna agar tidak dapat menerima pesan lagi.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">broadcast</summary>
+  <p class="mt-2 text-gray-300">Mengirim pesan siaran ke semua group chat dan private chat.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bccancel</summary>
+  <p class="mt-2 text-gray-300">Membatalkan pesan siaran.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bcconfirm</summary>
+  <p class="mt-2 text-gray-300">Mengkonfirmasi pesan siaran.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bcgroup</summary>
+  <p class="mt-2 text-gray-300">Mengirim pesan siaran ke semua group chat.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bcgchidetag</summary>
+  <p class="mt-2 text-gray-300">Mengirim pesan siaran ke semua group chat dengan jenis pesan tagall tersembunyi.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bchidetag</summary>
+  <p class="mt-2 text-gray-300">Mengirim pesan siaran ke semua group chat dan private chat denganpesam tagall tersembunyi.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bcmember</summary>
+  <p class="mt-2 text-gray-300">Mengirim pesan siaran ke member group tertentu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bcpremium</summary>
+  <p class="mt-2 text-gray-300">Mengirim pesan siaran ke semua member premium yang terdaftar di #lisprem.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bcpc</summary>
+  <p class="mt-2 text-gray-300">Mengirim pesan siaran ke private chat.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bcsewa</summary>
+  <p class="mt-2 text-gray-300">Mengirim pesan siaran langsung ke group chat yang terdaftar di #listsewa.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bcstat</summary>
+  <p class="mt-2 text-gray-300">Melihat status broadcast yang tersedia.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">buttonmode</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan mode pesan button pada sebagian besar fitur.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">buttontojson</summary>
+  <p class="mt-2 text-gray-300">Mengambil kode json dari pesan button.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">call</summary>
+  <p class="mt-2 text-gray-300">Menelfon seseorang menggunakan nomor bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cekaccount</summary>
+  <p class="mt-2 text-gray-300">Melihat informasi sekilas dari akun wibusoft.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cekopenaikey</summary>
+  <p class="mt-2 text-gray-300">Melihat informasi terkait key dari open ai.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">chatgroup</summary>
+  <p class="mt-2 text-gray-300">Mengirim pesan ke 1 group dari nomor bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">clearchat</summary>
+  <p class="mt-2 text-gray-300">Menghapus riwayat pesan di nomor bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">copythumbnail</summary>
+  <p class="mt-2 text-gray-300">Mengambil kode json dari thumbnail.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">createbutton</summary>
+  <p class="mt-2 text-gray-300">Membuat pesan dengan jenis button biasa.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">createlist</summary>
+  <p class="mt-2 text-gray-300">Membuat pesan dengan jenis list [kadaluarsa].</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">createredeem</summary>
+  <p class="mt-2 text-gray-300">Membuat kode redeem berhadiah baru.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">createthumbnail</summary>
+  <p class="mt-2 text-gray-300">Membuat pesan dengan jenis thumbnail.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">delbalance</summary>
+  <p class="mt-2 text-gray-300">Mengurangi balance pada pengguna.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">dellevel</summary>
+  <p class="mt-2 text-gray-300">Mengurangi level pada pengguna.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">dellimit</summary>
+  <p class="mt-2 text-gray-300">Mengurangi limit pada pengguna.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">delpremium</summary>
+  <p class="mt-2 text-gray-300">Menghapus premium pengguna.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">deleteredeem</summary>
+  <p class="mt-2 text-gray-300">Menghapus kode redeem berhadia.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">delrespon</summary>
+  <p class="mt-2 text-gray-300">Menghapus pesan balasan otomatis.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">delsewa</summary>
+  <p class="mt-2 text-gray-300">Menghapus group dari daftar #listsewa.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">delxp</summary>
+  <p class="mt-2 text-gray-300">Mengurangi exp dari pengguna.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">globalgamemode</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan izin bermain game secara global.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">golink</summary>
+  <p class="mt-2 text-gray-300">Mengambil link group yang dimasuki dan memiliki otoritas admin oleh bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">grabcontact</summary>
+  <p class="mt-2 text-gray-300">Mengambil detail kontak member group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">grouponlypremium</summary>
+  <p class="mt-2 text-gray-300">Menggaktifkan batasan hanya dapat digunakan oleh member premium dalam 1 group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">inforedeem</summary>
+  <p class="mt-2 text-gray-300">Menampilkan informasi dari kode berhadiah yang ada.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">invitme</summary>
+  <p class="mt-2 text-gray-300">Mengirim undangan ke diri sendiri.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">join</summary>
+  <p class="mt-2 text-gray-300">Memasukkan nomor bot kedalam group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">leaveall</summary>
+  <p class="mt-2 text-gray-300">Mengeluarkan bot dari semua group yang ada.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">leavegcbyid</summary>
+  <p class="mt-2 text-gray-300">Mengeluarkan bot dari group menggunakan id.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">levellingpc</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan mode naik level otomatis di private chat.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listredeem</summary>
+  <p class="mt-2 text-gray-300">Melihat daftar kode berhadiah.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listrespon</summary>
+  <p class="mt-2 text-gray-300">Melihat daftar pesan balasan otomatis.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listsewa</summary>
+  <p class="mt-2 text-gray-300">Melihat daftar group sewa.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listsewapermanent</summary>
+  <p class="mt-2 text-gray-300">Melihat daftar group sewa permanent.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mutebc</summary>
+  <p class="mt-2 text-gray-300">Menonaktifkan pesan broadcast dari group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mutebyid</summary>
+  <p class="mt-2 text-gray-300">Membatasi penggunaan bot hanya untuk admin pada group menggunakan id.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mycontacts</summary>
+  <p class="mt-2 text-gray-300">Melihat daftar kontak yang tersimpan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">onlygroup</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan batasan hanya dapat digunakan di group chat pada bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">onlyindo</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan batasan hanya menerima pengguna dari indonesia dan malaysia pada bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">onlyprem</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan batasan hanya dapat digunakan oleh pengguna premium pada bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">pconlyprem</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan batasan pada private chat hanya dapat digunakan oleh pengguna premium pada bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">premiumgroup</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan premium untuk group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">promoteme</summary>
+  <p class="mt-2 text-gray-300">Mengubah diri sendiri menjadi admin pada group chat.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">public</summary>
+  <p class="mt-2 text-gray-300">Mengubah bot kedalam mode public.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">publicbyid</summary>
+  <p class="mt-2 text-gray-300">Mengubah group chat ke mode public.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">queue</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan mode antrian sehingga bot hanya dapat memproses 1 pesan dalam 1 waktu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">react</summary>
+  <p class="mt-2 text-gray-300">Memberika reaksi pada pesan tertentu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">refreshpremiumlist</summary>
+  <p class="mt-2 text-gray-300">Memperbaharui data pengguna premium tampa menghapusnya satupun.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">resetanonymous</summary>
+  <p class="mt-2 text-gray-300">Mengatur ulang seluruh ruang obrolan anonymous.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">resetbalance</summary>
+  <p class="mt-2 text-gray-300">Mengatur ulang seluruh balance pada pengguna menjadi nol.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">resetlevel</summary>
+  <p class="mt-2 text-gray-300">Mengatur ulang seluruh level pada pengguna menjadi nol.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">resetxp</summary>
+  <p class="mt-2 text-gray-300">Mengatur ulang seluruh point exp pada mengguna menjadi 0.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">resetlimit</summary>
+  <p class="mt-2 text-gray-300">Mengatur ulang seluruh limit pengguna menjadi penuh kembali.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">resetlimitreceivedgroup</summary>
+  <p class="mt-2 text-gray-300">Mengatur ulang batasan dalam menerima pesan pada group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">resetpremium</summary>
+  <p class="mt-2 text-gray-300">Mengatur ulang daftar pengguna premium menjadi nol.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">resetresponsee</summary>
+  <p class="mt-2 text-gray-300">Mengatur ulang pesan balasan otomatis menjadi kosong.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">self</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan mode self pada bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">selfbyid</summary>
+  <p class="mt-2 text-gray-300">Mengaktifkan mode self pada salah satu group chat.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setbio</summary>
+  <p class="mt-2 text-gray-300">Mengubah bio akun whatsapp dari bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setdefaultweltype</summary>
+  <p class="mt-2 text-gray-300">Mengatur ulang tipe sambutan selamat datang pda group ke default.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setlimitgroup</summary>
+  <p class="mt-2 text-gray-300">Mangatur batasan penggunaan harian bot untuk satu group chat.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setlimitreceivedgroup</summary>
+  <p class="mt-2 text-gray-300">Mengatur batasan dalam menerima pesan harian pada group chat.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setname</summary>
+  <p class="mt-2 text-gray-300">Mengubah nama dari akun whatsapp bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setopenaikey</summary>
+  <p class="mt-2 text-gray-300">Mengatur key open ai yang digunakan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setpp</summary>
+  <p class="mt-2 text-gray-300">Mengatur foto profil yang digunakan pada akun whatsapp bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setpppanjang</summary>
+  <p class="mt-2 text-gray-300">Mengatur foto profil yang digunakan pada akun whatsapp bot dengan rasio panjang.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setwrsuit</summary>
+  <p class="mt-2 text-gray-300">Mengubah persentase kemenangan suit pada pengguna.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setwrttt</summary>
+  <p class="mt-2 text-gray-300">Mengubah persentase kemenangan tictactoe pada pengguna.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">testbutton</summary>
+  <p class="mt-2 text-gray-300">Memberikan contoh pesan yang menggunakan jenis button.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">unban</summary>
+  <p class="mt-2 text-gray-300">Menghapus pengguna dari #listban sehingga dapat menggunakan bot kembali.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">unblock</summary>
+  <p class="mt-2 text-gray-300">Menbuka kembali nomor pengguna yang dilokir oleh bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">unreact</summary>
+  <p class="mt-2 text-gray-300">Membatalkan reaksi yang diberikan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">upres</summary>
+  <p class="mt-2 text-gray-300">Mengupdate pesan balasan otomatis tertentu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">upsw</summary>
+  <p class="mt-2 text-gray-300">Mengupload status pada akun whatsapp bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">upswgroup</summary>
+  <p class="mt-2 text-gray-300">Mengupload status pada akun whatsapp bot hanya untuk member group tertentu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">upswpremium</summary>
+  <p class="mt-2 text-gray-300">Mengupload status pada akun whatsapp bot hanya untuk pengguna premiun.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">videocall</summary>
+  <p class="mt-2 text-gray-300">Melakukan video call menggunakan akun whatsapp bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setcommand</summary>
+  <p class="mt-2 text-gray-300">Mengubah pengaturan dari commmand tertentu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listcommand</summary>
+  <p class="mt-2 text-gray-300">Melihat daftar lengkap perintah bot, dapat di filter.</p>
+</details>
+        </div>
+      </section>
+
+      <section id="Random">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">Random</h2>
+        <div id="faqListRandom" class="space-y-4">
+          <details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">alay</summary>
+  <p class="mt-2 text-gray-300">Untuk mengubah teks biasa menjadi teks orang alay.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">apakah</summary>
+  <p class="mt-2 text-gray-300">Untuk mencari jawaban random dari pertanyaan yang di awali "apakah?".</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cekkhodam</summary>
+  <p class="mt-2 text-gray-300">Untuk melihat khodam spiritual berdasarkan nama.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">faktaunik</summary>
+  <p class="mt-2 text-gray-300">Mengirimkan fakta unik secara acak.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">jadian</summary>
+  <p class="mt-2 text-gray-300">Untuk menjodohkan orang secara acak.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kapankah</summary>
+  <p class="mt-2 text-gray-300">Untuk mencari jawaban random dari pertanyaan seputar "kapankah?*.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">katabijak</summary>
+  <p class="mt-2 text-gray-300">Mengirim kata-kata bijak secara acak.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">loli</summary>
+  <p class="mt-2 text-gray-300">Mengirim gambar anime loli secara acak.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">pantun</summary>
+  <p class="mt-2 text-gray-300">Mengirim pantun secara acak.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ppcouple</summary>
+  <p class="mt-2 text-gray-300">Mengirim foto yang cocok sebagai profil untuk para pasangan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">puisi</summary>
+  <p class="mt-2 text-gray-300">Mengirim puisi secara acak.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">quotesanime</summary>
+  <p class="mt-2 text-gray-300">Mengirim kata-kata berdasarkan cuplikan anime.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">randomanime</summary>
+  <p class="mt-2 text-gray-300">Mengirim gambar anime secara acak.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">randomnumber</summary>
+  <p class="mt-2 text-gray-300">Akan menghasilkan angka acak.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">randomtag</summary>
+  <p class="mt-2 text-gray-300">Menandai nomor random secara acak.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">rate</summary>
+  <p class="mt-2 text-gray-300">Untuk meminta penilain.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">siapakah</summary>
+  <p class="mt-2 text-gray-300">Mengirim jawaban acak seputar pertanyaan "#siapakah".</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">neko</summary>
+  <p class="mt-2 text-gray-300">Mengirimkan gambar anime dengan tema neko secara acak.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">waifu</summary>
+  <p class="mt-2 text-gray-300">Mengirim gambar anime yang cocok sebagai waifi secafa acak.</p>
+</details>
+        </div>
+      </section>
+
+      <section id="Anonymous">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">Anonymous</h2>
+        <div id="faqListAnonymous" class="space-y-4">
+          <details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">anonymous</summary>
+  <p class="mt-2 text-gray-300">Cari teman ngobrol seru secara anonim.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">start</summary>
+  <p class="mt-2 text-gray-300">Mulai mencari teman ngobrol baru.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">next</summary>
+  <p class="mt-2 text-gray-300">Mengganti teman ngobrol ke yang berikutnya.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">leave</summary>
+  <p class="mt-2 text-gray-300">Keluar dari ruang obrolan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">send</summary>
+  <p class="mt-2 text-gray-300">Kirim kontak ke teman ngobrol kamu.</p>
+</details>
+        </div>
+      </section>
+
+      <section id="Search">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">Search</h2>
+        <div id="faqListSearch" class="space-y-4">
+          <details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">alkitab</summary>
+  <p class="mt-2 text-gray-300"> Mencari ayat dari Alkitab berdasarkan kata kunci.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">alquranaudio</summary>
+  <p class="mt-2 text-gray-300"> Mendengarkan suara bacaan Al-Qur'an berdasarkan surah dan ayat nya.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">artinama</summary>
+  <p class="mt-2 text-gray-300">Mencari arti dari sebuah nama.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">brainly</summary>
+  <p class="mt-2 text-gray-300">Mencari jawaban dari soal dari Brainly.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cekidff</summary>
+  <p class="mt-2 text-gray-300">Mengecek ID akun Free Fire.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cekidml</summary>
+  <p class="mt-2 text-gray-300">Mengecek ID akun Mobile Legends.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cuaca</summary>
+  <p class="mt-2 text-gray-300">Menampilkan informasi cuaca dari lokasi tertentu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">dorama</summary>
+  <p class="mt-2 text-gray-300">Mencari informasi tentang drama Jepang atau Korea.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">google</summary>
+  <p class="mt-2 text-gray-300">Mencari informasi dari Google berdasarkan kata kunci tertentu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">googleimage</summary>
+  <p class="mt-2 text-gray-300">Mencari gambar dari Google berdasarkan kata kunci tertentu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">igstalk</summary>
+  <p class="mt-2 text-gray-300"> Melihat informasi akun Instagram berdasarkan username Instagram.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ipchecker</summary>
+  <p class="mt-2 text-gray-300">→ Mengecek informasi tentang alamat IP tertentu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">jadwalshalat</summary>
+  <p class="mt-2 text-gray-300">Menampilkan jadwal shalat pada lokasi yang diberikan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">lirik</summary>
+  <p class="mt-2 text-gray-300">Mencari lirik lagu berdasarkan judul atau potongan lirik lagu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">otakudesuinfo</summary>
+  <p class="mt-2 text-gray-300">Mencari informasi tentang anime dari situs Otakudesu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">otakudesuongoing</summary>
+  <p class="mt-2 text-gray-300">Menampilkan daftar anime yang sedang tayang di Otakudesu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">otakudesu</summary>
+  <p class="mt-2 text-gray-300">Mencari anime yang tersedia di Otakudesu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">pinterest</summary>
+  <p class="mt-2 text-gray-300">Mencari gambar dari Pinterest berdasarkan kata kunci.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">play</summary>
+  <p class="mt-2 text-gray-300">Mencari dan memutar konten dari YouTube berdasarkan judul.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">wikipedia</summary>
+  <p class="mt-2 text-gray-300">Mencari informasi dari Wikipedia berdasarkan kaata tertentu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ytsearch</summary>
+  <p class="mt-2 text-gray-300">Mencari konten dari YouTube berdasarkan judul.</p>
+</details>
+        </div>
+      </section>
+
+      <section id="Sticker">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">Sticker</h2>
+        <div id="faqListSticker" class="space-y-4">
+          <details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ttp</summary>
+  <p class="mt-2 text-gray-300">membuat stiker teks.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">attp</summary>
+  <p class="mt-2 text-gray-300">Membuat stiker teks dengan animasi (animated text).</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">brat</summary>
+  <p class="mt-2 text-gray-300">Membuat stiker dengan efek anomali text.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bratvideo</summary>
+  <p class="mt-2 text-gray-300">Membuat efek animasi pada stiker anomali.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">delsetwm</summary>
+  <p class="mt-2 text-gray-300">Menghapus watermark dari stiker.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">quickchat</summary>
+  <p class="mt-2 text-gray-300">Membuat stiker dari teks dengan gaya obrolan cepat.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">semoji</summary>
+  <p class="mt-2 text-gray-300">Mengubah emoji menjadi stiker.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">semojimix</summary>
+  <p class="mt-2 text-gray-300">Menggabungkan dua emoji menjadi satu stiker unik.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">setwm</summary>
+  <p class="mt-2 text-gray-300">Menambahkan watermark pada stiker.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">sticker</summary>
+  <p class="mt-2 text-gray-300">Mengubah gambar menjadi stiker statis.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">stickercircle</summary>
+  <p class="mt-2 text-gray-300">Membuat stiker berbentuk lingkaran.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">stickerinfo</summary>
+  <p class="mt-2 text-gray-300">Menampilkan informasi tentang stiker yang dikirim.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">smeme</summary>
+  <p class="mt-2 text-gray-300">Membuat stiker meme dengan teks khusus.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">snobg</summary>
+  <p class="mt-2 text-gray-300">Membuat stiker tanpa latar belakang.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">stickerwm</summary>
+  <p class="mt-2 text-gray-300">Membuat stiker dengan watermark khusus.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">takesticker</summary>
+  <p class="mt-2 text-gray-300">Mengambil dan menyimpan stiker dari chat.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">telestick</summary>
+  <p class="mt-2 text-gray-300">Mengunduh stiker dari Telegram.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">toimg</summary>
+  <p class="mt-2 text-gray-300">Mengonversi stiker menjadi gambar.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">trigger</summary>
+  <p class="mt-2 text-gray-300">Menambahkan efek triggered pada gambar sebelum dijadikan stiker.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ttp</summary>
+  <p class="mt-2 text-gray-300">Membuat stiker teks biasa (text to picture).</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ziptelestick</summary>
+  <p class="mt-2 text-gray-300">Mengunduh dan mengonversi paket stiker dari Telegram.</p>
+</details>
+        </div>
+      </section>
+
+      <section id="Tools">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">Tools</h2>
+        <div id="faqListTools" class="space-y-4">
+          
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ptvtovideo</summary>
+  <p class="mt-2 text-gray-300">Mengubah pesan quickvideo menjadi pesan video biasa.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">readmore</summary>
+  <p class="mt-2 text-gray-300">Membuat pesan [lihat selengkapnya...] palsu alias buatan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">readviewonce</summary>
+  <p class="mt-2 text-gray-300">Mengirim ulang pesan sekali lihat menjadi pesan biasa.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">myemail</summary>
+  <p class="mt-2 text-gray-300">Meminta email sementara untuk menerima email.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">getemail</summary>
+  <p class="mt-2 text-gray-300">Melihat pesan terbaru yang telah dikirim ke email sementara.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">halah</summary>
+  <p class="mt-2 text-gray-300">Mengubah huruf vokal teks menjadi a seluruhnya.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">hilih</summary>
+  <p class="mt-2 text-gray-300">Mengubah huruf vokal teks menjadi i seluruhnya.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">huluh</summary>
+  <p class="mt-2 text-gray-300">Mengubah huruf vokal teks menjadi u seluruhnya.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">heleh</summary>
+  <p class="mt-2 text-gray-300">Mengubah huruf vokal teks menjadi e seluruhnya.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">holoh</summary>
+  <p class="mt-2 text-gray-300">Mengubah huruf vokal teks menjadi o seluruhnya.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">wait</summary>
+  <p class="mt-2 text-gray-300">Mencari judul anime berdasarkan foto dari cuplikan anime.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">blur</summary>
+  <p class="mt-2 text-gray-300">Memberikan efek blur pada gambar.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cekplatform</summary>
+  <p class="mt-2 text-gray-300">Mengecek informasi platform yang digunakan.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ehex</summary>
+  <p class="mt-2 text-gray-300">Mengenkripsi teks ke format HEX.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">dhex</summary>
+  <p class="mt-2 text-gray-300">Mendekripsi teks dari format HEX.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ebase64</summary>
+  <p class="mt-2 text-gray-300">Mengenkripsi teks ke format Base64.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">dbase64</summary>
+  <p class="mt-2 text-gray-300">Mendekripsi teks dari format Base64.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">enc</summary>
+  <p class="mt-2 text-gray-300">Mengenkripsi teks dengan format khusus.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">dec</summary>
+  <p class="mt-2 text-gray-300">Mendekripsi teks yang telah dienkripsi.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">fakereply</summary>
+  <p class="mt-2 text-gray-300">Membuat balasan palsu di chat.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">hartatahta</summary>
+  <p class="mt-2 text-gray-300">Membuat teks "Harta Tahta" dengan efek unik.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kirim</summary>
+  <p class="mt-2 text-gray-300">Mengirim pesan dengan format tertentu.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">confess</summary>
+  <p class="mt-2 text-gray-300">Mengirim pesan pengakuan secara anonim.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">menfess</summary>
+  <p class="mt-2 text-gray-300">Mengirim pesan rahasia ke pengguna lain.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">nulis</summary>
+  <p class="mt-2 text-gray-300">Mengubah teks menjadi tulisan tangan.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">folio</summary>
+  <p class="mt-2 text-gray-300">Membuat tulisan tangan di kertas folio.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ocr</summary>
+  <p class="mt-2 text-gray-300">Mengubah teks dari gambar menjadi teks digital (Optical Character Recognition).</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">poll</summary>
+  <p class="mt-2 text-gray-300">Membuat polling atau jajak pendapat dalam grup.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">qrcode</summary>
+  <p class="mt-2 text-gray-300">Membuat kode QR dari teks atau tautan.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">qrcodereader</summary>
+  <p class="mt-2 text-gray-300">Membaca dan mendekode QR Code dari gambar.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">removebackground</summary>
+  <p class="mt-2 text-gray-300">Menghapus latar belakang dari gambar secara otomatis.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">screenshot</summary>
+  <p class="mt-2 text-gray-300">Mengambil tangkapan layar dari tautan atau halaman web.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">shortlink</summary>
+  <p class="mt-2 text-gray-300">Memperpendek tautan panjang menjadi URL pendek.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tomp3</summary>
+  <p class="mt-2 text-gray-300">Mengubah video menjadi format audio MP3.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tovn</summary>
+  <p class="mt-2 text-gray-300">Mengubah file audio menjadi format VN (Voice Note).</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">toquickvideo</summary>
+  <p class="mt-2 text-gray-300">Mengonversi video ke format yang lebih ringan.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tourl</summary>
+  <p class="mt-2 text-gray-300">Mengubah file menjadi tautan unduhan langsung.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">toviewonce</summary>
+  <p class="mt-2 text-gray-300">Mengubah media menjadi format view once.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">translate</summary>
+  <p class="mt-2 text-gray-300">Menerjemahkan teks ke berbagai bahasa.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tts</summary>
+  <p class="mt-2 text-gray-300">Mengubah teks menjadi suara (Text-to-Speech).</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tts2</summary>
+  <p class="mt-2 text-gray-300">Alternatif fitur Text-to-Speech dengan suara berbeda.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">upscale</summary>
+  <p class="mt-2 text-gray-300">Meningkatkan kualitas dan resolusi gambar.</p>
+</details>
+
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ytcomment</summary>
+  <p class="mt-2 text-gray-300">Membuat tampilan komentar YouTube palsu.</p>
+</details>
+        </div>
+      </section>
+
+      <section id="Informasi">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">Informasi</h2>
+        <div id="faqListInformasi" class="space-y-4">
+          <details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">buylimit</summary>
+  <p class="mt-2 text-gray-300">untuk membeli limit menggunakan balance jika kehabisan limit.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cekpremium</summary>
+  <p class="mt-2 text-gray-300">untuk melihat sisa durasi premium.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">infocovid</summary>
+  <p class="mt-2 text-gray-300">untuk melihat informasi terkini virus covid 19.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">infogempa</summary>
+  <p class="mt-2 text-gray-300">untuk melihat informasi terkini gempa yang terjadi.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">infounsur</summary>
+  <p class="mt-2 text-gray-300">untuk melihat informasi unsur berdasarkan kode unsur.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">kodebahasa</summary>
+  <p class="mt-2 text-gray-300">untuk menampilkan kode bahasa yang tersedia.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">leavegcnosewa</summary>
+  <p class="mt-2 text-gray-300">untuk mengeluarkan bot dari group yang tidak terdaftar di.#listsewa.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">level</summary>
+  <p class="mt-2 text-gray-300">untuk menampilkan informasi terkait level.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">limit</summary>
+  <p class="mt-2 text-gray-300">untuk menampilkan informasi terkait limit.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">balance</summary>
+  <p class="mt-2 text-gray-300">untuk menampilkan informasi terkait balance.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listban</summary>
+  <p class="mt-2 text-gray-300">untuk menampilkan daftar user yang dibanned.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listblock</summary>
+  <p class="mt-2 text-gray-300">untik Menampilkan daftar kontak yang terblokir.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listgroup</summary>
+  <p class="mt-2 text-gray-300">untuk menampilkan daftar group yang dimasuki oleh bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listgroupnosewa</summary>
+  <p class="mt-2 text-gray-300">untuk menampilkan daftar group yang tidak terdaftar di #listsewa.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listonline</summary>
+  <p class="mt-2 text-gray-300">untuk menampilkan daftar member online di dalam group.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listpremium</summary>
+  <p class="mt-2 text-gray-300">untuk menampilkan daftar user premium.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">listpremiumgroup</summary>
+  <p class="mt-2 text-gray-300">untuk menampilkan daftar group premium.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">profile</summary>
+  <p class="mt-2 text-gray-300">untuk menampilkan informasi lengkap user.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">report</summary>
+  <p class="mt-2 text-gray-300">untuk membuat laporan yang akan langsung diberikan ke owner bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">status</summary>
+  <p class="mt-2 text-gray-300">untuk melihat informasi status terkait bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">topglobal</summary>
+  <p class="mt-2 text-gray-300">untuk melihat daftar user top secar global mulai dari juara 1 - 10.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">toplocal</summary>
+  <p class="mt-2 text-gray-300">untuk melihat daftar user top secar local alias hanya dalam 1 group mulai dari juara 1 - 10.</p>
+</details>
+        </div>
+      </section>
+
+      <section id="Download">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">Download</h2>
+        <div id="faqListDownload" class="space-y-4">
+          
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">douyin</summary>
+  <p class="mt-2 text-gray-300">Mengunduh video dari Douyin (TikTok China).</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">facebook</summary>
+  <p class="mt-2 text-gray-300">Mengunduh video dari Facebook.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">igstory</summary>
+  <p class="mt-2 text-gray-300">Mengunduh Instagram Story dari akun tertentu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">igdl</summary>
+  <p class="mt-2 text-gray-300">Mengunduh gambar atau video dari Instagram.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">igtv</summary>
+  <p class="mt-2 text-gray-300">Mengunduh video IGTV dari Instagram.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">igreel</summary>
+  <p class="mt-2 text-gray-300">Mengunduh video Reels dari Instagram.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">mediafire</summary>
+  <p class="mt-2 text-gray-300">Mengunduh file dari MediaFire.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">otakudesudl</summary>
+  <p class="mt-2 text-gray-300">Mengunduh anime dari situs Otakudesu.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">pindl</summary>
+  <p class="mt-2 text-gray-300">Mengunduh video dari Pinterest.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">spotify</summary>
+  <p class="mt-2 text-gray-300">Mengunduh lagu dari Spotify.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">threads</summary>
+  <p class="mt-2 text-gray-300">Mengunduh postingan dari Threads.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tiktoknowm</summary>
+  <p class="mt-2 text-gray-300">Mengunduh video TikTok tanpa watermark.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tiktokwm</summary>
+  <p class="mt-2 text-gray-300">Mengunduh video TikTok dengan watermark.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">tiktokmusic</summary>
+  <p class="mt-2 text-gray-300">Mengunduh audio atau lagu dari TikTok.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">twitterdl</summary>
+  <p class="mt-2 text-gray-300">Mengunduh gambar atau video dari Twitter (X).</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ytmp3</summary>
+  <p class="mt-2 text-gray-300">Mengunduh dan mengonversi video YouTube menjadi format MP3.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">ytmp4</summary>
+  <p class="mt-2 text-gray-300">Mengunduh video dari YouTube dalam format MP4.
+        </div>
+      </section>
+
+      <section id="General">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">General</h2>
+        <div id="faqListGeneral" class="space-y-4">
+          
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">infobot</summary>
+  <p class="mt-2 text-gray-300">Menampilkan informasi lengkap tentang bot, termasuk uptime dan statistik penggunaan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">.owner</summary>
+  <p class="mt-2 text-gray-300">Menampilkan informasi kontak pemilik bot.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">.ping</summary>
+  <p class="mt-2 text-gray-300">Mengecek kecepatan respons bot dalam milidetik.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">runtime</summary>
+  <p class="mt-2 text-gray-300">Menampilkan informasi berapa lama bot aktif.</p>
+</details>
+        </div>
+      </section>
+
+      <section id="Textmaker">
+        <h2 class="text-4xl font-bold text-center mb-10 mt-10">Text maker</h2>
+        <div id="faqListTextmaker" class="space-y-4">
+          <details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">thunder</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan efek petir.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">blackpink</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan model font blackpink.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bear</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan model beruang.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cloud</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan latar belakang awan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">neonlight</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan latar belakang neon bercahaya.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">sand</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan latar belakang pasir pantai.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">glow</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan efek bercahaya.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">neon</summary>
+  <p class="mt-2 text-gray-300">neonMembuat teks dengan gaya neon.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">window</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan latar belakang jendela.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">sky</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan latar belakang langit.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">cartoon</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan latar belakang 2D alias kartun.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">spacetext</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan efek luar angkasa.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">greenneon</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan latar belakang panggung dan font neon.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">bokeh</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan latar belakang hasil potret kamera bokeh.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">firework</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan efek kembang api.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">narutologo</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan logo khas naruto.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">glitch</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan efek glitch atau gangguan visual.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">thor</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan font gaya judul film thor.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">wolf</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan latar belakang serigala.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">phlogo</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan gaya porno hub.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">avangers</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan gaya avangers.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">marvel</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan gaya Marvel.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">halloween</summary>
+  <p class="mt-2 text-gray-300">hMembuat teks dengan gaya Halloween.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">graffiti</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan efek graffiti jalanan.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">deadpool</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan gaya Deadpool.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">colorneon</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan lataw belakang warna warni dengan teks font neon.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">glitch</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan efek glitch atau gangguan visual.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">digitalglitch</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan efek glitch atau gangguan visual dengan gaya modern.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">wetglass</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan background jendela saat hujan dengan gaya cartoon.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">watercolor</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan efek cat air.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">pubglogo</summary>
+  <p class="mt-2 text-gray-300">Membuat teks dengan gaya logo game PUBG.</p>
+</details>
+
+<details class="bg-gray-900 shadow-md rounded-lg p-4">
+  <summary class="font-semibold cursor-pointer">fflogo</summary>
+  <p class="mt-2 text-gray-300"> Membuat teks dengan gaya logo game free fire.</p>
+</details>
+        </div>
+      </section>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-[#2f2f2f] text-white py-10 px-6">
+  <div class="max-w-6xl mx-auto grid md:grid-cols-3 gap-8 text-center md:text-left">
+    <div>
+      <h3 class="text-lg font-semibold mb-2 text-[#808080]">Komunitas CyberZ</h3>
+      <a href="https://chat.whatsapp.com/ITcFQRlkRMO880PpW0Elcb" target="_blank" class="flex items-center justify-center md:justify-start gap-2 text-white hover:underline">
+        <i class="fab fa-whatsapp text-green-500"></i> Gabung Grup WhatsApp
+      </a>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-2 text-[#808080]">Saluran CyberZ</h3>
+      <a href="https://whatsapp.com/channel/0029Vae7FDcEAKWJtDD7cD0d" target="_blank" class="flex items-center justify-center md:justify-start gap-2 text-white hover:underline">
+        <i class="fab fa-whatsapp text-green-500"></i> Ikuti Channel WhatsApp
+      </a>
+    </div>
+    <div>
+      <h3 class="text-lg font-semibold mb-2 text-[#808080]">Kontak Owner</h3>
+      <a href="https://wa.me/6288293391320" target="_blank" class="flex items-center justify-center md:justify-start gap-2 text-white hover:underline">
+        <i class="fas fa-store text-green-400"></i> Hubungi Ajiiz
+      </a>
+    </div>
+  </div>
+  <div class="border-t border-gray-600 my-6"></div>
+  <div class="text-center text-sm text-gray-400">
+    <p>© 2023 <span class="text-white">CyberZ</span>. All rights reserved. Design by 
+      <a href="https://wa.me/62895414015883" target="_blank" class="text-white font-semibold hover:underline">AZ</a>
+    </p>
+  </div>
+</footer>
+
+<!-- Tombol Ke Atas -->
+<button id="backToTop"
+  class="fixed bottom-20 right-6 z-50 p-3 rounded-full bg-gray-700 bg-opacity-50 text-white hover:bg-opacity-80 transition hidden"
+  title="Kembali ke atas">
+  <i class="fas fa-arrow-up"></i>
+</button>
+
+
+<script>
+  function filterFAQ() {
+    const search = document.getElementById('searchInput').value.toLowerCase();
+    const allFaqs = document.querySelectorAll('section div[id^="faqList"] details');
+
+    allFaqs.forEach(detail => {
+      const title = detail.querySelector('summary').textContent.toLowerCase();
+      detail.style.display = title.includes(search) ? 'block' : 'none';
+    });
+  }
+
+  document.getElementById('searchBtn').addEventListener('click', filterFAQ);
+  document.getElementById('searchInput').addEventListener('keydown', function (e) {
+    if (e.key === 'Enter') filterFAQ();
+  });
+
+  document.getElementById('sectionSelect').addEventListener('change', function () {
+    const value = this.value;
+    if (value === 'all') {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    } else {
+      const section = document.getElementById(value);
+      if (section) {
+        const offset = 100;
+        const sectionTop = section.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({ top: sectionTop, behavior: 'smooth' });
+      }
+    }
+  });
+
+
+  const backToTopBtn = document.getElementById('backToTop');
+// Tampilkan tombol ketika scroll ke bawah
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 300) {
+    backToTopBtn.classList.remove('hidden');
+  } else {
+    backToTopBtn.classList.add('hidden');
+  }
+});
+
+// Fungsi scroll ke atas saat tombol diklik
+backToTopBtn.addEventListener('click', () => {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+});
+
+</script>
+
+
+</body>
+</html>
